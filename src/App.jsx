@@ -21,6 +21,9 @@ import CredentialVerify from './pages/admin/CredentialVerify'
 import Transactions from './pages/admin/Transactions'
 import Withdrawal from './pages/admin/Withdrawal'
 
+import Footer from './components/Footer'
+import AdminFooter from './components/admin/AdminFooter'
+
 const App = () => {
 
   const {pathname} = useLocation();
@@ -53,7 +56,11 @@ const App = () => {
 
         </Route>
       </Routes>
+      {!pathname.includes('/admin') && <Footer/>}
+      {pathname.includes('/admin') && <AdminFooter/>}
       <ChatBox/>
+
+
     </div>
   )
 }

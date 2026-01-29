@@ -4,6 +4,7 @@ import { dummyChats } from '../assets/assets'
 import { Loader2Icon, Send, X } from 'lucide-react'
 import { clearChat } from '../app/features/chatSlice'
 import {format} from 'date-fns'
+import Signature from '../pages/Signature'
 
 const ChatBox = () => {
 
@@ -59,6 +60,7 @@ const ChatBox = () => {
 
 
   return (
+    <>
     <div className='fixed inset-0 bg-black/70 backdrop:blur bg-opacity-50 z-100 flex items-center justify-center sm:p-4'>
         <div className='bg-white sm:rounded-lg shadow-2xl w-full max-w-2xl h-screen sm:h-[600px] flex flex-col'>
 
@@ -143,6 +145,8 @@ const ChatBox = () => {
             }
         </div>
     </div>
+    <Signature/>
+    </>
   )
 }
 

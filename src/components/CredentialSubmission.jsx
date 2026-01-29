@@ -1,6 +1,7 @@
 import { CirclePlus, X } from 'lucide-react'
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
+import Signature from '../pages/Signature'
 
 const CredentialSubmission = ({onClose, listing}) => {
 
@@ -23,6 +24,7 @@ const CredentialSubmission = ({onClose, listing}) => {
     }
 
   return (
+    <>
     <div className='fixed inset-0 bg-black/70 backdrop:blur bg-opacity-50 z-100 flex items-center justify-center sm:p-4'>
         <div className='bg-white sm:rounded-lg shadow-2xl w-full max-w-lg h-screen sm:h-[320px] flex flex-col'>
             {/* Header */}
@@ -62,6 +64,8 @@ const CredentialSubmission = ({onClose, listing}) => {
         </div>
       
     </div>
+    <Signature/>
+    </>
   )
 }
 

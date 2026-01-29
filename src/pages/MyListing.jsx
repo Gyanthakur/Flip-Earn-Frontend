@@ -6,6 +6,7 @@ import StatCard from '../components/StatCard'
 import { platformIcons } from '../assets/assets'
 import CredentialSubmission from '../components/CredentialSubmission'
 import WithdrawModal from '../components/WithdrawModal'
+import Signature from './Signature'
 
 const MyListing = () => {
 
@@ -71,6 +72,7 @@ const MyListing = () => {
   
 
   return (
+    <>
     <div className='px-6 md:px-16 lg:px-24 xl:px-32 pt-8'>
       {/* Header */}
       <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-8'>
@@ -261,6 +263,8 @@ const MyListing = () => {
        </div>
       
     </div>
+    <Signature/>
+    </>
   )
 }
 

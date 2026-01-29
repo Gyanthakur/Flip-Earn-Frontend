@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { assets } from '../assets/assets'
 import { toast } from 'react-toastify';
 import { Github, InstagramIcon, Linkedin, Mail, MessageCircleCode } from 'lucide-react';
+import Logger from './Logger';
 
 const Footer = () => {
 
@@ -19,7 +20,8 @@ const Footer = () => {
   };
   return (
     <>
-     <footer className="mt-24 px-6 md:px-16 lg:px-24 xl:px-32 w-full text-sm text-slate-500 bg-white pt-10">
+       <hr className='ml-30 mr-30 bg-white border-t border-gray-200  text-center mt-4'/>
+     <footer className="mt-5 px-6 md:px-16 lg:px-24 xl:px-32 w-full text-sm text-slate-500 bg-white pt-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
                     <div className="sm:col-span-2 lg:col-span-1">
                         <a href="/">
@@ -27,8 +29,14 @@ const Footer = () => {
                         </a>
                         <p className="text-sm/7 mt-6">flipearn is a social media marketplace . We are the leading
                             social media marketplace that connects brands with their
-                            customers With our user-friendly interface.</p>
+                            customers With our user-friendly interface.
+                        </p>
+                        <img className='w-60 h-25 bg-transparent' src="/flipearnbygyan1.png" alt="Flip-Earn" />
+                            <div className="md:hidden lg:hidden flex items-center justify-center rounded-lg mt-4 gap-2 w-fit">
+                                 <Logger />
+                            </div>
                     </div>
+                    
                     <div className="flex flex-col lg:items-center lg:justify-center">
                         <div className="flex flex-col text-sm space-y-2.5">
                             <h2 className="font-semibold mb-5 text-gray-800">Company</h2>

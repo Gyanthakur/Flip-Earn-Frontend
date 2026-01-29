@@ -1,7 +1,9 @@
 import React from 'react'
+import Signature from '../pages/Signature'
 
 const CTA = () => {
   return (
+    <>
     <div className="max-w-5xl mx-2 md:mx-auto p-px rounded-2xl bg-gradient-to-r from-purple-600/20 to-blue-500/30">
             <div className="flex flex-col items-center justify-center text-center py-12 md:py-16 rounded-[15px] bg-gradient-to-r from-[#F3EAFF] to-[#E1EFFF]">  
                 <div className="flex items-center justify-center bg-white px-3 py-1.5 shadow gap-1 rounded-full text-xs">
@@ -23,6 +25,8 @@ with their customers With our user-friendly interface.</p>
                 </button>
             </div>
         </div>
+        <Signature/>
+        </>
   )
 }
 

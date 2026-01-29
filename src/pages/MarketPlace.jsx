@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import ListingCard from '../components/ListingCard';
 import FilterSidebar from '../components/FilterSidebar';
+import Signature from './Signature';
 
 const MarketPlace = () => {
 
@@ -84,6 +85,7 @@ const MarketPlace = () => {
 
 
   return (
+    <>
     <div className='px-6 md:px-16 lg:px-24 xl:px-32'>
 
       <div className='flex items-center justify-between text-slate-500'>
@@ -108,6 +110,8 @@ const MarketPlace = () => {
 
       </div>
     </div>
+    <Signature/>
+    </>
   )
 }
 

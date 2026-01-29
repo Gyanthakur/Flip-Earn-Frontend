@@ -4,6 +4,7 @@ import { getProfileLink, platformIcons } from '../assets/assets';
 import { useDispatch, useSelector } from 'react-redux';
 import { ArrowLeftIcon, ArrowUpRightFromSquare, Calendar, CheckCircle2, ChevronLeftIcon, ChevronRightIcon, DollarSign, Eye, LineChart, Loader2Icon, MapPin, MessageSquare, MessageSquareMoreIcon, ShoppingBagIcon, Users } from 'lucide-react';
 import { setChat } from '../app/features/chatSlice';
+import Signature from './Signature';
 
 const ListingDetails = () => {
 
@@ -40,6 +41,7 @@ const ListingDetails = () => {
   },[listingId, listings])
 
   return listing ? (
+    <>
     <div className='mx-auto min-h-screen px-6 md:px-16 lg:px-24 xl:px-32'>
       <button onClick={()=> navigate(-1)} className='flex items-center gap-2 text-slate-600 py-4'>
         <ArrowLeftIcon className='size-4' /> Go to Previous Page
@@ -253,6 +255,8 @@ const ListingDetails = () => {
        </div>
 
     </div>
+    <Signature/>
+    </>
   ) : (
     <div className='h-screen flex justify-center items-center'>
       <Loader2Icon className='size-7 animate-spin text-indigo-600' />
